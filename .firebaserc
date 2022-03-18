@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "medicare-pro": {
+      "hosting": {
+        "my-medicare-project": [
+          "medicare-pro"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "medicare-pro"
+  }
+}

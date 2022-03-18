@@ -99,6 +99,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "my-medicare-project:build:production",
+            "firebaseProject": "medicare-pro",
+            "firebaseHostingSite": "medicare-pro"
+          }
         }
       }
     }
