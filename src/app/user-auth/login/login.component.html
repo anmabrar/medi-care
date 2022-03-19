@@ -6,7 +6,7 @@
                 <div class="card-body">
                     <form>
                         <div class="mb-3">
-                            <h4 class="text-dark text-muted">Login</h4>
+                            <h4 class="text-dark text-muted text-center">Login</h4>
                         </div>
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">Email</label>
@@ -25,6 +25,15 @@
                             <div class="col-md-6">
                                 <a href="" class="text-dark" style="text-decoration: none;"> Forgot Password ?</a>
                             </div>
+                        </div>
+                        <div class="row mt-2">
+                            <a (click)="signInWithGoogle()" style="text-decoration: none;">
+                                <div class="card shadow-1 text-center">
+                                    <div class="card-body">
+                                            <img src="https://cdn.icon-icons.com/icons2/800/PNG/512/_google_icon-icons.com_65791.png" alt="" height="40" width="40"> Sign in with Google
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                       </form>
                 </div>

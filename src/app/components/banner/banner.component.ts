@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
@@ -8,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerComponent implements OnInit {
 
-  i : any = "https://www.cleanmoswabs.com/photo/cs33440483-disposable_sterile_swab.jpg"
-  j : any = "https://www.cleanmoswabs.com/photo/cs33938765-chg_swab.jpg"
-  k : any = "https://www.cleanmoswabs.com/photo/cs33440483-disposable_sterile_swab.jpg"
+  i : any = "https://www.linkpicture.com/q/01_155.jpg"
+  j : any = "https://www.linkpicture.com/q/02_186.jpg"
+  k : any = "https://www.linkpicture.com/q/03_156.jpg"
 
   images = [this.i, this.j, this.k].map((n) => `${n}`);
 
