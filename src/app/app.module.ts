@@ -8,13 +8,14 @@ import { provideFirebaseApp, initializeApp} from '@angular/fire/app'
 import { provideFirestore, getFirestore} from '@angular/fire/firestore'
 import { provideAuth,getAuth } from '@angular/fire/auth';
 
-
+//bootstrap & froms
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 
 // module 
 import { UserAuthModule } from './user-auth/user-auth.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 //components
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -22,7 +23,6 @@ import { BannerComponent } from './components/banner/banner.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AboutUsComponent } from './components/about-us/about-us.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home.component';
 
 
@@ -34,7 +34,6 @@ import { HomeComponent } from './components/home/home.component';
     BannerComponent,
     FooterComponent,
     AboutUsComponent,
-    DashboardComponent,
     HomeComponent
   ],
   imports: [
@@ -44,6 +43,7 @@ import { HomeComponent } from './components/home/home.component';
     FormsModule,
     FontAwesomeModule,
     UserAuthModule,
+    DashboardModule,
     AngularFireModule.initializeApp(environment.firebase),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
