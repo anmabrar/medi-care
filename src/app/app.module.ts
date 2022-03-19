@@ -24,7 +24,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { HomeComponent } from './components/home/home.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 
@@ -37,6 +37,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AboutUsComponent,
     HomeComponent,
     NotFoundComponent
+ 
   ],
   imports: [
     BrowserModule,

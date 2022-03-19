@@ -6,8 +6,8 @@ import { AppRoutingModule } from '../app-routing.module';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddDoctorComponent } from './add-doctor/add-doctor.component';
-import { AddServiceComponent } from './add-service/add-service.component';
 import { AddReviewComponent } from './add-review/add-review.component';
+import { AddMediServiceComponent } from './add-medi-service/add-medi-service.component';
 
 
 
@@ -15,8 +15,8 @@ import { AddReviewComponent } from './add-review/add-review.component';
   declarations: [
     DashboardComponent,
     AddDoctorComponent,
-    AddServiceComponent,
-    AddReviewComponent
+    AddReviewComponent,
+    AddMediServiceComponent
   ],
   imports: [
     CommonModule,
@@ -26,8 +26,8 @@ import { AddReviewComponent } from './add-review/add-review.component';
   exports:[
     DashboardComponent,
     AddDoctorComponent,
-    AddServiceComponent,
     AddReviewComponent,
+    AddMediServiceComponent
   ]
 
 })
