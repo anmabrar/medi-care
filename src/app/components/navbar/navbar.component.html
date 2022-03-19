@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class=" container">
+    <div class=" container ">
       <a class="navbar-brand" href="#">
           <img src="https://www.wellcare.com/-/media/Providers/provider_02/providermedicareiconblue.ashx?h=256&w=256&la=en&hash=19DFD3521F684823941D4A56FA217A7A" alt="" width="50" height="50">
           Medicare
@@ -21,18 +21,18 @@
           <li class="nav-item px-3">
             <a class="nav-link active" aria-current="page" href="#">About</a>
           </li>
-         
         </ul>
+        <div class="d-flex align-items-center">
+          <h6 className="text-light">Medicare user</h6>
+          <a routerLink="/login">
+            <button class="btn btn-primary mx-1"> Login</button>
+          </a>
+          <a routerLink="/register">
+            <button class="btn btn-primary mx-1"> Register</button>
+          </a>
+          <button class="btn btn-primary mx-1"> Logout</button>
+        </div>
       </div>
-      <div class="d-flex align-items-center">
-        <h6 className="text-light">Medicare user</h6>
-        <a routerLink="/login">
-          <button class="btn btn-primary mx-1"> Login</button>
-        </a>
-        <a routerLink="/register">
-          <button class="btn btn-primary mx-1"> Register</button>
-        </a>
-        <button class="btn btn-primary mx-1"> Logout</button>
-      </div>
+      
     </div>
   </nav>
