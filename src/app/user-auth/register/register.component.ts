@@ -8,7 +8,6 @@ import { AuthService } from '../auth.service';
 })
 export class RegisterComponent implements OnInit {
 
-  user : string = '';
   email : string ='';
   password : string = '';
 
@@ -19,10 +18,7 @@ export class RegisterComponent implements OnInit {
   }
 
   register(){
-    if(this.user == ''){
-      alert('Please enter user name');
-      return;
-    }
+  
     if(this.email == ''){
       alert('Please enter email');
       return;
@@ -33,7 +29,6 @@ export class RegisterComponent implements OnInit {
     }
 
     this.auth.register( this.email,this.password);
-    this.user = '';
     this.email = '';
     this.password = '';
   }
