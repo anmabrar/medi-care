@@ -3,6 +3,8 @@ import { DoctorService } from 'src/app/dashboard/services/doctor.service';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Doctor } from 'src/app/model/doctor';
 
+
+
 @Component({
   selector: 'app-all-doctor',
   templateUrl: './all-doctor.component.html',
@@ -10,27 +12,34 @@ import { Doctor } from 'src/app/model/doctor';
 })
 export class AllDoctorComponent implements OnInit {
 
-  doctorList : any;
+  Doctors : any;
+ 
 
-  constructor(private store: AngularFirestore, private doctorData :DoctorService) { }
+  constructor( private doctorService :DoctorService, private firestore : AngularFirestore) { }
 
   ngOnInit(): void {
-    this.getAllDoctors();
+  this.getAllDoctors()
   }
-
 
 
 
   getAllDoctors() {
 
-    this.store.collection('doctors').snapshotChanges().subscribe((res) => {
+    this.firestore.collection('doctors').snapshotChanges().subscribe((res) => {
 
-      this.doctorList = res.map(e =>
+      this.Doctors = res.map(e =>
         Object.assign({id :e.payload.doc.id},e.payload.doc.data())
       );
-        console.log(res)
     })
   }
+  
+  deleteDoctor(doctor : Doctor){
+    console.log("ok")
+    // this.firestore.collection('doctors').doc(id).delete();
+    this.doctorService.deleteDoctor(doctor.id);
+    
+  }
+  
 
  
 }

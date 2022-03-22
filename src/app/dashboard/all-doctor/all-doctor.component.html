@@ -10,12 +10,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr scope="col table-secondary" *ngFor="let doctor of doctorList">
+            <tr scope="col table-secondary" *ngFor="let doctor of Doctors">
                 <td class="table-secondary">{{doctor.name}}</td>
                 <td class="table-secondary">{{doctor.degree}}</td>
                 <td class="table-secondary">{{doctor.hospital}}</td>
                 <td class="table-secondary">{{doctor.email}}</td>
                 <td class="table-secondary">{{doctor.mobile}}</td>
+                <button class="btn btn-danger" (click)="deleteDoctor(doctor)">Delete</button> 
             </tr>
             
         </tbody>

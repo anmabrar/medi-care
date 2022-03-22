@@ -8,11 +8,13 @@ import { environment } from 'src/environments/environment';
 import { provideFirebaseApp, initializeApp} from '@angular/fire/app'
 import { provideFirestore, getFirestore} from '@angular/fire/firestore'
 import { provideAuth,getAuth } from '@angular/fire/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 //bootstrap & froms
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // module 
 import { UserAuthModule } from './user-auth/user-auth.module';
@@ -28,7 +30,8 @@ import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { MediServiceComponent } from './components/medi-service/medi-service.component';
 import { DoctorComponent } from './components/doctor/doctor.component';
-import { AllDoctorComponent } from './components/all-doctor/all-doctor.component';
+import { AllDoctorComponent } from './dashboard/all-doctor/all-doctor.component';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
 
 
 
@@ -51,6 +54,7 @@ import { AllDoctorComponent } from './components/all-doctor/all-doctor.component
     AppRoutingModule,
     NgbModule,
     FormsModule,
+    ReactiveFormsModule,
     FontAwesomeModule,
     UserAuthModule,
     DashboardModule,
@@ -58,7 +62,10 @@ import { AllDoctorComponent } from './components/all-doctor/all-doctor.component
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
     provideAuth(() => getAuth()),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireStorageModule,
+    AngularFirestoreModule,
+    provideDatabase(() => getDatabase())
     
     
   ],

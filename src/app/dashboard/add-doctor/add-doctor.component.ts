@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Doctor } from 'src/app/model/doctor';
 import { DoctorService } from '../services/doctor.service';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Component({
   selector: 'app-add-doctor',
@@ -9,10 +10,10 @@ import { DoctorService } from '../services/doctor.service';
 })
 export class AddDoctorComponent implements OnInit {
 
-  doctorList : Doctor[] = [];
+  // doctorList : Doctor[] = [];
 
   doctorObj: Doctor ={
-    id : '',
+    id :'',
     name : '',
     degree : '',
     hospital : '',
@@ -20,33 +21,22 @@ export class AddDoctorComponent implements OnInit {
     mobile : ''
   };
 
-  id : string ='';
+
   name : string ='';
   degree : string ='';
   hospital : string ='';
   email : string ='';
   mobile : string ='';
 
-  constructor( private doctorData : DoctorService) { }
+  constructor( private doctorService : DoctorService, private firestore : AngularFirestore) { }
 
   ngOnInit(): void {
-    this.getAllDoctors();
-  }
+    this.doctorService.getDoctorsList();
 
-  getAllDoctors(){
-    this.doctorData.getAllDoctors().subscribe( res=>{
-      this.doctorList = res.map((e :any) =>{
-        const doctorData = e.payload.doc.doctorData();
-        doctorData.id = e.payload.doc.id;
-        return doctorData;
-      })
-    }, err =>{
-      alert(err.massage);
-    })
   }
 
   resetForm(){
-    this.id = '';
+    
     this.name ='';
     this.degree='';
     this.hospital='';
@@ -59,25 +49,15 @@ export class AddDoctorComponent implements OnInit {
       alert('Fill all input fields');
       return;
     }
-    this.doctorObj.id = '';
+    
     this.doctorObj.name = this.name;
     this.doctorObj.degree = this.degree;
     this.doctorObj.hospital = this.hospital;
     this.doctorObj.email = this.email;
     this.doctorObj.mobile = this.mobile;
 
-    this.doctorData.addDoctor(this.doctorObj);
+    this.doctorService.addDoctor(this.doctorObj);
     this.resetForm();
-  }
-
-  updateDoctor(){
-
-  }
-
-  deleteDoctor(doctor : Doctor){
-    if(window.confirm('Are you sure you want to delete ' + doctor.name + ' ' + doctor.degree + ' ?')){
-      this.doctorData.deleteDoctor(doctor);
-    }
   }
 
 }
