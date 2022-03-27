@@ -8,6 +8,7 @@ import {
   updateDoc,
   deleteDoc
 } from '@angular/fire/firestore'
+import { MediService } from 'src/app/model/medi-care';
 
 @Component({
   selector: 'app-add-medi-service',
@@ -25,9 +26,9 @@ export class AddMediServiceComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  addData( value : any){
+  addData( medi : MediService){
     const dbInstance = collection(this.firestore, 'medi-service');
-    addDoc(dbInstance,value)
+    addDoc(dbInstance,medi)
     .then(()=>{
       alert("Data Sent");
     })
@@ -47,10 +48,10 @@ export class AddMediServiceComponent implements OnInit {
   }
 
 
-  updateData( id : string){
-    const dataToUpdate = doc(this.firestore,'medi-service',id);
+  updateData(  medi : MediService ){
+    const dataToUpdate = doc(this.firestore,'medi-service',medi.id);
     updateDoc(dataToUpdate,{
-      name : "sakib"
+      name : medi.name
     })
     .then(()=> {
       alert('Updated');

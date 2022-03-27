@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { DoctorService } from 'src/app/dashboard/services/doctor.service';
+import { 
+  doc,
+  Firestore,
+  deleteDoc
+ } from 'firebase/firestore';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Doctor } from 'src/app/model/doctor';
 
@@ -15,7 +20,7 @@ export class AllDoctorComponent implements OnInit {
   Doctors : any;
  
 
-  constructor( private doctorService :DoctorService, private firestore : AngularFirestore) { }
+  constructor(  private doctorService :DoctorService, private firestore : AngularFirestore) { }
 
   ngOnInit(): void {
   this.getAllDoctors()
@@ -33,12 +38,14 @@ export class AllDoctorComponent implements OnInit {
     })
   }
   
-  deleteDoctor(doctor : Doctor){
-    console.log("ok")
-    // this.firestore.collection('doctors').doc(id).delete();
-    this.doctorService.deleteDoctor(doctor.id);
+  // deleteDoctor(id :string){
+  //   console.log("ok");
+  //   const deleteDr = doc( this.fireStore,'doctors', id);
+  //   deleteDoc(deleteDr);
+  //   // this.firestore.collection('doctors').doc(id).delete();
     
-  }
+    
+  // }
   
 
  

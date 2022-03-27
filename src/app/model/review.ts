@@ -1,6 +1,6 @@
-export interface MediService{
+export interface Review{
     id : string,
     name : string,
     email : string,
-    password : string
+    review : string
 }

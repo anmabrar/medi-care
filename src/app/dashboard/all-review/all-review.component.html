@@ -1,0 +1,24 @@
+<div class="container">
+    
+<div class="row  g-3">
+    <div class="col" *ngFor="let review of reviews.slice(0,4)">
+      <div class="card">
+          <div class="mx-auto p-3">
+            <img src="https://cdn-icons-png.flaticon.com/128/709/709699.png" class="card-img-top " style="height: 100px; width: 100px;" alt="...">
+          </div>
+        
+        <div class="card-body">
+          <h5 class="card-title">{{review.name}}</h5>
+          <p class="card-text">{{review.review}}</p>
+          <!-- <p>{{review.email}}</p> -->
+        </div>
+        <!-- <div class="card-footer">
+          
+            <button class="btn btn-danger btn-sm" (click)="deleteReview(review)"> Delete</button>
+            <button class="btn btn-primary btn-sm me-4" (click)="openModal(review)">Update</button>
+    row-cols-1 row-cols-md-3
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
