@@ -28,7 +28,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { MediServiceComponent } from './components/medi-service/medi-service.component';
 import { DoctorComponent } from './components/doctor/doctor.component';
 import { AllDoctorComponent } from './dashboard/all-doctor/all-doctor.component';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
@@ -44,7 +43,6 @@ import { provideDatabase,getDatabase } from '@angular/fire/database';
     AboutUsComponent,
     HomeComponent,
     NotFoundComponent,
-    MediServiceComponent,
     DoctorComponent,
     AllDoctorComponent
  

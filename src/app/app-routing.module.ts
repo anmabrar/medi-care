@@ -3,9 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { AllDoctorComponent } from './dashboard/all-doctor/all-doctor.component';
-import { DoctorComponent } from './components/doctor/doctor.component';
 import { HomeComponent } from './components/home/home.component';
-import { MediServiceComponent } from './components/medi-service/medi-service.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { LoginComponent } from './user-auth/login/login.component';
