@@ -10,10 +10,9 @@
         <h5>{{ doctor.name }}</h5>
         <h6>{{ doctor.degree }}</h6>
         <p>{{ doctor.hospital }}</p>
-        <p>
-          {{ doctor.email }} <br/>
-          {{ doctor.mobile }}
-        </p>
+      </div>
+      <div class="card my-2">
+        <button class="btn btn-success" (click)="openModal(doctor)">Appointment Now</button>
       </div>
     </div>
   </div>

@@ -3,6 +3,7 @@ import { DoctorService } from 'src/app/dashboard/services/doctor.service';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Doctor } from 'src/app/model/doctor';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { AppointmentModalComponent } from '../appointment-modal/appointment-modal.component';
 
 @Component({
   selector: 'app-best-doctor',
@@ -29,6 +30,14 @@ export class BestDoctorComponent implements OnInit {
         Object.assign({id :e.payload.doc.id},e.payload.doc.data())
       );
     })
+  }
+
+  openModal(doctor :Doctor ){
+    const modalRef = this.modal.open(AppointmentModalComponent,{
+      size : 'lg',
+      centered : true,
+    })
+    modalRef.componentInstance.doctor = doctor;
   }
 
 }

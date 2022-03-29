@@ -15,6 +15,12 @@ import { MediServicesModalComponent } from './medi-services-modal/medi-services-
 import { BestDoctorComponent } from './best-doctor/best-doctor.component';
 import { BestServicesComponent } from './best-services/best-services.component';
 import { DoctorListComponent } from './doctor-list/doctor-list.component';
+import { ServicesListComponent } from './services-list/services-list.component';
+import { OrderListComponent } from './order-list/order-list.component';
+import { DoctorModalComponent } from './doctor-modal/doctor-modal.component';
+import { AppointmentModalComponent } from './appointment-modal/appointment-modal.component';
+import { BookingServicesModalComponent } from './booking-services-modal/booking-services-modal.component';
+import { AppoinmentListComponent } from './appoinment-list/appoinment-list.component';
 
 
 
@@ -30,7 +36,13 @@ import { DoctorListComponent } from './doctor-list/doctor-list.component';
     MediServicesModalComponent,
     BestDoctorComponent,
     BestServicesComponent,
-    DoctorListComponent
+    DoctorListComponent,
+    ServicesListComponent,
+    OrderListComponent,
+    DoctorModalComponent,
+    AppointmentModalComponent,
+    BookingServicesModalComponent,
+    AppoinmentListComponent
   ],
   imports: [
     CommonModule,
@@ -48,7 +60,13 @@ import { DoctorListComponent } from './doctor-list/doctor-list.component';
     MediServicesModalComponent,
     BestDoctorComponent,
     BestServicesComponent,
-    DoctorListComponent
+    DoctorListComponent,
+    ServicesListComponent,
+    OrderListComponent,
+    DoctorModalComponent,
+    AppointmentModalComponent,
+    BookingServicesModalComponent,
+    AppoinmentListComponent
   ]
 
 })

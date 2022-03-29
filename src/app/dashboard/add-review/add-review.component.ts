@@ -11,6 +11,7 @@ import { Review } from 'src/app/model/review';
 export class AddReviewComponent implements OnInit {
   id!: string;
   name!: string;
+  photo !: string; 
   email!: string;
   review!: string;
 
@@ -21,6 +22,7 @@ export class AddReviewComponent implements OnInit {
   reviewSubmit(form: NgForm) {
     const newReview: any = {
       name: this.name,
+      photo : this.photo,
       email: this.email,
       review: this.review,
     };

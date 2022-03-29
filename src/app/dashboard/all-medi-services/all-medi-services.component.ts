@@ -3,7 +3,7 @@ import { MediServicesService } from '../services/medi-services.service';
 import { MediServices } from 'src/app/model/medi-services';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { MediServicesModalComponent } from '../medi-services-modal/medi-services-modal.component';
+import { BookingServicesModalComponent } from '../booking-services-modal/booking-services-modal.component';
 
 @Component({
   selector: 'app-all-medi-services',
@@ -33,7 +33,7 @@ export class AllMediServicesComponent implements OnInit {
   }
 
   openModal(mediServices : MediServices){
-    const modalRef = this.modal.open(MediServicesModalComponent,{
+    const modalRef = this.modal.open(BookingServicesModalComponent,{
       size : 'lg',
       centered :true,
     });

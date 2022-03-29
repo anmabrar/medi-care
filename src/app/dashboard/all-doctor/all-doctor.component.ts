@@ -3,6 +3,7 @@ import { DoctorService } from 'src/app/dashboard/services/doctor.service';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Doctor } from 'src/app/model/doctor';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { AppointmentModalComponent } from '../appointment-modal/appointment-modal.component';
 
 
 
@@ -35,8 +36,12 @@ export class AllDoctorComponent implements OnInit {
     })
   }
   
-  deleteDoctor(doctor : Doctor){
-    this.doctorService.deleteDoctor(doctor);
+  openModal(doctor :Doctor ){
+    const modalRef = this.modal.open(AppointmentModalComponent,{
+      size : 'lg',
+      centered : true,
+    })
+    modalRef.componentInstance.doctor = doctor;
   }
   
 
