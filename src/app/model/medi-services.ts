@@ -1,6 +1,7 @@
 export interface MediServices{
     id : string,
-    name : string,
-    email : string,
-    password : string
+    service_name : string,
+    photo : string,
+    discription : string,
+    price : string
 }

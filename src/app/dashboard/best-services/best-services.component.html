@@ -1,1 +1,19 @@
-<p>best-services works!</p>
+<div class="container">
+    <h1 class="text-center mt-3">Our Medi Services</h1>
+    <hr>
+    <div class="row">
+        <div class="col-lg-4 card" *ngFor="let medi of medi_services.slice(0, 3)">
+            <div class="py-3">
+                <img src="{{medi.photo}}" alt="" height="300px" width="415px">
+            </div>
+            <div>
+                <h5>{{medi.service_name}}</h5>
+                <p>{{medi.discription}}</p>
+            </div>
+            <div class="card border-0">
+              <h3>Price: {{medi.price}} Taka</h3>
+                <button class="btn btn-primary my-3 " (click)="openModal(medi)">Book Now</button>
+            </div>
+        </div>
+    </div>
+  </div>

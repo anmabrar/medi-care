@@ -1,19 +1,27 @@
 <div class="container ">
-  <div class="col-lg-6 mx-auto">
-    <form class="card border-0 shadow p-3" #addMediForm="ngForm" (ngSubmit)="addMediServices(addMediForm)">
+  <div class="col-lg mx-auto">
+    <form class="card border-0 shadow p-3" #addMediForm="ngForm"(ngSubmit)="addMediServices(addMediForm)" >
       <div class="form-floating mb-3 tetx-center">
         <h3 class="text-center text-warning">Add Medi Services</h3>
       </div>
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="firstName" name="firstname" [(ngModel)]="name">
-        <label for="firstname"> Name</label>
+        <input type="text" class="form-control" id="Name" name="name" [(ngModel)]="service_name">
+        <label for="name">Medi Service Name</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email">
-        <label for="email">Email</label>
+        <input type="text" class="form-control" id="Photo" name="photo" [(ngModel)]="photo">
+        <label for="photo">Photo Link</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="discription" name="discription" [(ngModel)]="discription">
+        <label for="discription">Discription</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="Price" name="price" [(ngModel)]="price">
+        <label for="price">Price</label>
       </div>
    
-      <input type="submit" value="submit" class="form-control btn btn-primary" />
+      <input type="submit" value="submit" class="form-control btn btn-primary"  />
     </form>
 
   </div>
