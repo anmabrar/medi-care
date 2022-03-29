@@ -8,12 +8,12 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { LoginComponent } from './user-auth/login/login.component';
 import { RegisterComponent } from './user-auth/register/register.component';
-import { AddMediServiceComponent } from './dashboard/add-medi-service/add-medi-service.component';
+import { AllMediServicesComponent } from './dashboard/all-medi-services/all-medi-services.component';
 
 const routes: Routes = [
   { path : '', redirectTo:'/home',pathMatch:"full"},
   { path :'home', component : HomeComponent},
-  { path :'service', component : AddMediServiceComponent},
+  { path :'services', component : AllMediServicesComponent},
   { path :'doctor', component : AllDoctorComponent},
   { path :'about', component : AboutUsComponent},
   { path :'dashboard', component : DashboardComponent},

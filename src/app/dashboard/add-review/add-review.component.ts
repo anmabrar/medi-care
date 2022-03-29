@@ -24,7 +24,7 @@ export class AddReviewComponent implements OnInit {
       email: this.email,
       review: this.review,
     };
-    console.log('ok');
+    
     this.reviewService.addReview(newReview).then(() => {
       alert('Add successfully');
       form.reset();
