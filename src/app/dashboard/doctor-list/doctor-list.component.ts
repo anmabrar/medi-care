@@ -4,27 +4,23 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Doctor } from 'src/app/model/doctor';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
-
-
 @Component({
-  selector: 'app-all-doctor',
-  templateUrl: './all-doctor.component.html',
-  styleUrls: ['./all-doctor.component.css']
+  selector: 'app-doctor-list',
+  templateUrl: './doctor-list.component.html',
+  styleUrls: ['./doctor-list.component.css']
 })
-export class AllDoctorComponent implements OnInit {
+export class DoctorListComponent implements OnInit {
 
   Doctors : any;
- 
 
-  constructor( 
+  constructor(
     private doctorService :DoctorService,
     private firestore : AngularFirestore,
     private modal : NgbModal
-    ) { this.getAllDoctors() }
+  ) { this.getAllDoctors() }
 
-  ngOnInit(): void {}
-
-
+  ngOnInit(): void {
+  }
 
   getAllDoctors() {
 
@@ -38,7 +34,5 @@ export class AllDoctorComponent implements OnInit {
   deleteDoctor(doctor : Doctor){
     this.doctorService.deleteDoctor(doctor);
   }
-  
 
- 
 }

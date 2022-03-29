@@ -14,6 +14,7 @@ import { AllMediServicesComponent } from './all-medi-services/all-medi-services.
 import { MediServicesModalComponent } from './medi-services-modal/medi-services-modal.component';
 import { BestDoctorComponent } from './best-doctor/best-doctor.component';
 import { BestServicesComponent } from './best-services/best-services.component';
+import { DoctorListComponent } from './doctor-list/doctor-list.component';
 
 
 
@@ -28,7 +29,8 @@ import { BestServicesComponent } from './best-services/best-services.component';
     AllMediServicesComponent,
     MediServicesModalComponent,
     BestDoctorComponent,
-    BestServicesComponent
+    BestServicesComponent,
+    DoctorListComponent
   ],
   imports: [
     CommonModule,
@@ -43,7 +45,10 @@ import { BestServicesComponent } from './best-services/best-services.component';
     AllReviewComponent,
     ReviewModalComponent,
     AllMediServicesComponent,
-    MediServicesModalComponent
+    MediServicesModalComponent,
+    BestDoctorComponent,
+    BestServicesComponent,
+    DoctorListComponent
   ]
 
 })

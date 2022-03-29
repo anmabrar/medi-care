@@ -12,6 +12,7 @@ export class AddDoctorComponent implements OnInit {
 
 
   name !: string ;
+  photo !: string;
   degree !: string ;
   hospital !: string ;
   email !: string ;
@@ -22,22 +23,27 @@ export class AddDoctorComponent implements OnInit {
   ngOnInit(): void {}
 
   addDoctor(form : NgForm){
-    if (this.name == '' || this.degree == '' || this.hospital == '' || this.email == '' || this.mobile == ''){
-      alert('Fill all input fields');
-      return;
-    }
-    
+
     const newDoctor : any = {
       name : this.name,
+      photo : this.photo,
       degree : this.degree,
       hospital : this.hospital,
       email : this.email,
       mobile : this.mobile,
     };
-
+   
     this.doctorService.addDoctor(newDoctor).then(()=>{
-      alert('Add successfully');
-      form.reset();
+      if (newDoctor.name == ''|| newDoctor.degree == '' || newDoctor.hospital == '' || newDoctor.email == '' || newDoctor.mobile == ''){
+        console.log("not ok")
+        alert('Fill all input fields');
+        return;
+      }else{
+        alert('Add successfully');
+        form.reset();
+      }
+      
+     
     })
   }
 
