@@ -3,19 +3,21 @@
         <div class="col-md-2 card  text-center" style="height: 100vh;">
             <h1 class=" p-3">Dashboard</h1>
             <div class="card border-0">
-                <button class="btn btn-secondary p-3 mb-2">Home</button>
-                <button class="btn btn-secondary p-3 mb-2">Add Doctor</button>
-                <button class="btn btn-secondary p-3 mb-2">Add Medi Services</button>
-                <button class="btn btn-secondary p-3 mb-2">Add Review</button>
-                <button class="btn btn-secondary p-3 mb-2">All Doctor List</button>
-                <button class="btn btn-secondary p-3 mb-2">All Medi Services</button>
+                <button (click)="addDoctor()" class="btn btn-secondary p-3 mb-2">Add Doctor</button>
+                <button (click)="addMedi()" class="btn btn-secondary p-3 mb-2">Add Medi Services</button>
+                <button (click)="sendReview()" class="btn btn-secondary p-3 mb-2">Send Review</button>
+                <button (click)="doctorList()" class="btn btn-secondary p-3 mb-2">Doctor List</button>
+                <button class="btn btn-secondary p-3 mb-2">Medi Services List</button>
                 <button class="btn btn-secondary p-3 mb-2">Order List</button>
                 <button class="btn btn-secondary p-3 mb-2">Payment</button>
             </div>
         </div>
-        <div class="col-md-10 mt-5">
-            <app-add-doctor></app-add-doctor>
-            <app-add-medi-service></app-add-medi-service>
+        <div [ngSwitch]="display" class="col-md-10 mt-5">
+            <app-add-doctor *ngSwitchCase="'doctor'"></app-add-doctor>
+            <app-add-medi-service *ngSwitchCase="'medi'"></app-add-medi-service>
+            <app-add-review *ngSwitchCase="'review'"></app-add-review>
+            <app-doctor-list *ngSwitchCase="'doctorList'"></app-doctor-list>
+            
         </div>
     </div>
 </div>

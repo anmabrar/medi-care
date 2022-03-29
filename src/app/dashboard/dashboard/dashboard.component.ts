@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
+  display : any;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  addDoctor(){
+    this.display ="doctor"
+  }
+
+  addMedi(){
+    this.display = "medi"
+  }
+
+  sendReview(){
+    this.display = "review"
+  }
+
+  doctorList(){
+    this.display = "doctorList"
   }
 
 }
