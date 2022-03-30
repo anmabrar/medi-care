@@ -1,38 +1,76 @@
 <div class="container">
-    <div class="col">
-        <form class="card border-0 shadow p-3" #bookingForm="ngForm">
-            <div class="form-floating mb-3 tetx-center">
-                <h3 class="text-center text-warning">Appointment Now</h3>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="Name" description="name" [(ngModel)]="patient_name">
-                <label for="name">Patient name</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="Age" description="age" [(ngModel)]="age">
-                <label for="age">Age</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="Address" description="address" [(ngModel)]="address">
-                <label for="address">Address</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="Problem" description="problem" [(ngModel)]="problem">
-                <label for="problem">Problem</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="time" class="form-control" id="Time" description="time" [(ngModel)]="time">
-                <label for="time">Time</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="date" class="form-control" id="Date" description="data" [(ngModel)]="data">
-                <label for="data">Date</label>
-            </div>
-            <button type="button" class="btn btn-outline-success" (click)="addBooking(bookingForm)">Submit Booking</button>
-    
-        </form>
-        
-    </div>
+  <div class="col">
+    <form class="card border-0 shadow p-3" #bookingForm="ngForm">
+      <div class="form-floating mb-3 tetx-center">
+        <h3 class="text-center text-warning">Appointment Now</h3>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="Name"
+          name="name"
+          [(ngModel)]="patient_name"
+        />
+        <label for="name">Patient name</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="Age"
+          name="age"
+          [(ngModel)]="age"
+        />
+        <label for="age">Age</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="Address"
+          name="address"
+          [(ngModel)]="address"
+        />
+        <label for="address">Address</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="Problem"
+          name="problem"
+          [(ngModel)]="problem"
+        />
+        <label for="problem">Problem</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="time"
+          class="form-control"
+          id="Time"
+          name="time"
+          [(ngModel)]="time"
+        />
+        <label for="time">Time</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="date"
+          class="form-control"
+          id="Date"
+          name="data"
+          [(ngModel)]="data"
+        />
+        <label for="data">Date</label>
+      </div>
+      <button
+        type="button"
+        class="btn btn-outline-success"
+        (click)="addBooking(bookingForm)"
+      >
+        Submit Booking
+      </button>
+    </form>
+  </div>
 </div>
-
-
