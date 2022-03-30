@@ -8,7 +8,7 @@
 - Firebase
 
 # Installation
-- node install '''sudo apt install nodejs'''
+- node install ```sudo apt install nodejs```
 
 # Feature
 - Booking Services
