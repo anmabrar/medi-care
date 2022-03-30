@@ -1,38 +1,77 @@
 <div class="container">
-    <div class="col">
-        <form class="card border-0 shadow p-3" #doctorForm="ngForm">
-            <div class="form-floating mb-3 tetx-center">
-                <h3 class="text-center text-warning">Update Doctor's Information</h3>
-            </div>
-            <input type="hidden" description="id" [(ngModel)]="doctor.id" />
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="Name" description="name" [(ngModel)]="doctor.name">
-                <label for="name">Doctor's Name</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="Photo" description="photo" [(ngModel)]="doctor.photo">
-                <label for="photo">Photo Link</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="Degree" description="degree" [(ngModel)]="doctor.degree">
-                <label for="degree">Degree</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="Hospital" description="hospital" [(ngModel)]="doctor.hospital">
-                <label for="hospital">Hospital Name</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="Email" description="email" [(ngModel)]="doctor.email">
-                <label for="email">Email address</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="Mobile" description="mobile" [(ngModel)]="doctor.mobile">
-                <label for="mobile">Mobile</label>
-            </div>
-            <button type="button" class="btn btn-outline-success" (click)="updateDoctor()">Update</button>
-    
-        </form>
-        
-    </div>
+  <div class="col">
+    <form class="card border-0 shadow p-3" #doctorForm="ngForm">
+      <div class="form-floating mb-3 tetx-center">
+        <h3 class="text-center text-warning">Update Doctor's Information</h3>
+      </div>
+      <input type="hidden" name="id" [(ngModel)]="doctor.id" />
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="Name"
+          name="name"
+          [(ngModel)]="doctor.name"
+        />
+        <label for="name">Doctor's Name</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="Photo"
+          name="photo"
+          [(ngModel)]="doctor.photo"
+        />
+        <label for="photo">Photo Link</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="Degree"
+          name="degree"
+          [(ngModel)]="doctor.degree"
+        />
+        <label for="degree">Degree</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="Hospital"
+          name="hospital"
+          [(ngModel)]="doctor.hospital"
+        />
+        <label for="hospital">Hospital Name</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="email"
+          class="form-control"
+          id="Email"
+          name="email"
+          [(ngModel)]="doctor.email"
+        />
+        <label for="email">Email address</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="Mobile"
+          name="mobile"
+          [(ngModel)]="doctor.mobile"
+        />
+        <label for="mobile">Mobile</label>
+      </div>
+      <button
+        type="button"
+        class="btn btn-outline-success"
+        (click)="updateDoctor()"
+      >
+        Update
+      </button>
+    </form>
+  </div>
 </div>
-
