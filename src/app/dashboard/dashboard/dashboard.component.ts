@@ -31,4 +31,8 @@ export class DashboardComponent implements OnInit {
     this.display = "doctorList"
   }
 
+  mediServicesList(){
+    this.display = "mediServicesList"
+  }
+
 }

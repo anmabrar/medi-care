@@ -1,13 +1,13 @@
 <div class="container-fluid">
     <div class="row" >
         <div class="col-md-2 card  text-center" style="height: 100vh;">
-            <h1 class=" p-3">Dashboard</h1>
+            <h3 class=" p-3">Dashboard</h3>
             <div class="card border-0">
                 <button (click)="addDoctor()" class="btn btn-secondary p-3 mb-2">Add Doctor</button>
                 <button (click)="addMedi()" class="btn btn-secondary p-3 mb-2">Add Medi Services</button>
                 <button (click)="sendReview()" class="btn btn-secondary p-3 mb-2">Send Review</button>
                 <button (click)="doctorList()" class="btn btn-secondary p-3 mb-2">Doctor List</button>
-                <button class="btn btn-secondary p-3 mb-2">Medi Services List</button>
+                <button (click)="mediServicesList()" class="btn btn-secondary p-3 mb-2">Medi Services List</button>
                 <button class="btn btn-secondary p-3 mb-2">Order List</button>
                 <button class="btn btn-secondary p-3 mb-2">Appoinment List</button>
                 <button class="btn btn-secondary p-3 mb-2">Payment</button>
@@ -18,7 +18,7 @@
             <app-add-medi-service *ngSwitchCase="'medi'"></app-add-medi-service>
             <app-add-review *ngSwitchCase="'review'"></app-add-review>
             <app-doctor-list *ngSwitchCase="'doctorList'"></app-doctor-list>
-            
+            <app-medi-services-list *ngSwitchCase="'mediServicesList'"></app-medi-services-list>
         </div>
     </div>
 </div>
