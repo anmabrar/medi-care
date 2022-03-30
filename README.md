@@ -20,6 +20,8 @@ sudo apt install npm
 ```
 npm install -g @angular/cli
 ```
+- command for run project `ng serve`
+- command for build project `ng build`
 
 # Feature
 - Booking Services
