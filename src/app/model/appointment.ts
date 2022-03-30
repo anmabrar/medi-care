@@ -1,4 +1,4 @@
-export interface Appoinment {
+export interface Appointment {
     id : string,
     patient_name : string,
     age : string,

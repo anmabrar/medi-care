@@ -5,19 +5,19 @@
         <h3 class="text-center text-warning">Add Review</h3>
       </div>
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="firstName" name="firstname" [(ngModel)]="name">
+        <input type="text" class="form-control" id="firstName" description="firstname" [(ngModel)]="name">
         <label for="firstname"> Name</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email">
+        <input type="email" class="form-control" id="email" description="email" [(ngModel)]="email">
         <label for="email">Email</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="Photo" name="photo" [(ngModel)]="photo">
+        <input type="text" class="form-control" id="Photo" description="photo" [(ngModel)]="photo">
         <label for="photo">Photo Link</label>
       </div>
       <div class="form-floating mb-3">
-        <textarea class="form-control" rows="5" id="mobile" name="mobile" [(ngModel)]="review"></textarea>
+        <textarea class="form-control" rows="5" id="mobile" description="mobile" [(ngModel)]="review"></textarea>
         <label for="mobile">Review</label>
       </div>
       <input type="submit" value="submit" class="form-control btn btn-primary" />

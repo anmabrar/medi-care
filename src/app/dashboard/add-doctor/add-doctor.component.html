@@ -1,36 +1,76 @@
 <div class="container">
-        <div class="col">
-            <form class="card border-0 shadow p-3" #doctorForm="ngForm">
-                <div class="form-floating mb-3 tetx-center">
-                    <h3 class="text-center text-warning">Add Doctor</h3>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="Name" name="name" [(ngModel)]="name">
-                    <label for="name">Doctor's Name</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="Photo" name="photo" [(ngModel)]="photo">
-                    <label for="photo">Photo Link</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="Degree" name="degree" [(ngModel)]="degree">
-                    <label for="degree">Degree</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="Hospital" name="hospital" [(ngModel)]="hospital">
-                    <label for="hospital">Hospital Name</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="Email" name="email" [(ngModel)]="email">
-                    <label for="email">Email address</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="Mobile" name="mobile" [(ngModel)]="mobile">
-                    <label for="mobile">Mobile</label>
-                </div>
-                <button type="button" class="btn btn-outline-success" (click)="addDoctor(doctorForm)">Add Doctor</button>
-        
-            </form>
-            
-        </div>
+  <div class="col">
+    <form class="card border-0 shadow p-3" #doctorForm="ngForm">
+      <div class="form-floating mb-3 tetx-center">
+        <h3 class="text-center text-warning">Add Doctor</h3>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="Name"
+          description="name"
+          [(ngModel)]="name"
+        />
+        <label for="name">Doctor's Name</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="Photo"
+          description="photo"
+          [(ngModel)]="photo"
+        />
+        <label for="photo">Photo Link</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="Degree"
+          description="degree"
+          [(ngModel)]="degree"
+        />
+        <label for="degree">Degree</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="Hospital"
+          description="hospital"
+          [(ngModel)]="hospital"
+        />
+        <label for="hospital">Hospital Name</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="email"
+          class="form-control"
+          id="Email"
+          description="email"
+          [(ngModel)]="email"
+        />
+        <label for="email">Email address</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="Mobile"
+          description="mobile"
+          [(ngModel)]="mobile"
+        />
+        <label for="mobile">Mobile</label>
+      </div>
+      <button
+        type="button"
+        class="btn btn-outline-success"
+        (click)="addDoctor(doctorForm)"
+      >
+        Add Doctor
+      </button>
+    </form>
+  </div>
 </div>

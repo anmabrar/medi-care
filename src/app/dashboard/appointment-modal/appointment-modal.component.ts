@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppoinmentService } from '../services/appoinment.service';
+import { AppointmentService } from '../services/appointment';
 import { NgForm } from '@angular/forms';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -19,15 +19,15 @@ export class AppointmentModalComponent implements OnInit {
   data !: string;
 
   constructor(
-    private appoinmentService : AppoinmentService,
+    private appointmentService : AppointmentService,
     public activeModal : NgbActiveModal,
     ) { }
 
   ngOnInit(): void {
   }
 
-  addAppoinment(form : NgForm){
-    const newAppoinment : any = {
+  addAppointment(form : NgForm){
+    const newAppointment : any = {
       patient_name : this.patient_name,
       age : this.age,
       address: this.address,
@@ -35,7 +35,7 @@ export class AppointmentModalComponent implements OnInit {
       time : this.time,
       data : this.data
     }
-    this.appoinmentService.addAppoinment(newAppoinment).then(()=>{
+    this.appointmentService.addAppointment(newAppointment).then(()=>{
       alert('Add successfully');
       form.reset();
       this.activeModal.close();

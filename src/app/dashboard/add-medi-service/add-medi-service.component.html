@@ -1,28 +1,59 @@
-<div class="container ">
+<div class="container">
   <div class="col-lg mx-auto">
-    <form class="card border-0 shadow p-3" #addMediForm="ngForm"(ngSubmit)="addMediServices(addMediForm)" >
+    <form
+      class="card border-0 shadow p-3"
+      #addMediForm="ngForm"
+      (ngSubmit)="addMediServices(addMediForm)"
+    >
       <div class="form-floating mb-3 tetx-center">
         <h3 class="text-center text-warning">Add Medi Services</h3>
       </div>
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="Name" name="name" [(ngModel)]="service_name">
+        <input
+          type="text"
+          class="form-control"
+          id="Name"
+          description="name"
+          [(ngModel)]="service_name"
+        />
         <label for="name">Medi Service Name</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="Photo" name="photo" [(ngModel)]="photo">
+        <input
+          type="text"
+          class="form-control"
+          id="Photo"
+          description="photo"
+          [(ngModel)]="photo"
+        />
         <label for="photo">Photo Link</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="discription" name="discription" [(ngModel)]="discription">
-        <label for="discription">Discription</label>
+        <input
+          type="email"
+          class="form-control"
+          id="discription"
+          description="description"
+          [(ngModel)]="description"
+        />
+        <label for="discription">Description</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="Price" name="price" [(ngModel)]="price">
+        <input
+          type="text"
+          class="form-control"
+          id="Price"
+          description="price"
+          [(ngModel)]="price"
+        />
         <label for="price">Price</label>
       </div>
-   
-      <input type="submit" value="submit" class="form-control btn btn-primary"  />
-    </form>
 
+      <input
+        type="submit"
+        value="submit"
+        class="form-control btn btn-primary"
+      />
+    </form>
   </div>
 </div>

@@ -1,41 +1,68 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class=" container ">
-      <a class="navbar-brand" routerLink="/home">
-          <img src="https://www.wellcare.com/-/media/Providers/provider_02/providermedicareiconblue.ashx?h=256&w=256&la=en&hash=19DFD3521F684823941D4A56FA217A7A" alt="" width="50" height="50">
-          Medicare
-      </a>
-      <button class="navbar-toggler" (click)="isCollapsed = !isCollapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse " [ngbCollapse]="isCollapsed" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-          <li class="nav-item px-3">
-            <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
-          </li>
-          <li class="nav-item px-3">
-            <a class="nav-link active" aria-current="page" routerLink="/services">Services</a>
-          </li>
-          <li class="nav-item px-3">
-            <a class="nav-link active" aria-current="page" routerLink="/doctor">Doctor</a>
-          </li>
-          <li class="nav-item px-3">
-            <a class="nav-link active" aria-current="page" routerLink="/about">About</a>
-          </li>
-          <li class="nav-item px-3">
-            <a class="nav-link active" aria-current="page" routerLink="/dashboard">Dashboard</a>
-          </li>
-        </ul>
-        <div class="d-flex align-items-center">
-          <h6 className="text-light">Medicare user</h6>
-          <a routerLink="/login">
-            <button class="btn btn-primary mx-1"> Login</button>
-          </a>
-          <a routerLink="/register">
-            <button class="btn btn-primary mx-1"> Register</button>
-          </a>
-          <button class="btn btn-primary mx-1"> Logout</button>
-        </div>
+  <div class="container">
+    <a class="navbar-brand" routerLink="/home">
+      <img
+        src="https://www.wellcare.com/-/media/Providers/provider_02/providermedicareiconblue.ashx?h=256&w=256&la=en&hash=19DFD3521F684823941D4A56FA217A7A"
+        alt=""
+        width="50"
+        height="50"
+      />
+      Medicare
+    </a>
+    <button
+      class="navbar-toggler"
+      (click)="isCollapsed = !isCollapsed"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse"
+      [ngbCollapse]="isCollapsed"
+      id="navbarSupportedContent"
+    >
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item px-3">
+          <a class="nav-link active" aria-current="page" routerLink="/home"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link active" aria-current="page" routerLink="/services"
+            >Services</a
+          >
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link active" aria-current="page" routerLink="/doctor"
+            >Doctor</a
+          >
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link active" aria-current="page" routerLink="/about"
+            >About</a
+          >
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link active" aria-current="page" routerLink="/dashboard"
+            >Dashboard</a
+          >
+        </li>
+      </ul>
+      <div class="d-flex align-items-center">
+        <h6 className="text-light">Medicare user</h6>
+        <a routerLink="/login">
+          <button class="btn btn-primary mx-1">Login</button>
+        </a>
+        <a routerLink="/register">
+          <button class="btn btn-primary mx-1">Register</button>
+        </a>
+        <button class="btn btn-primary mx-1">Logout</button>
       </div>
-      
     </div>
-  </nav>
+  </div>
+</nav>
