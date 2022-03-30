@@ -9,4 +9,4 @@
 
 # Feature
 - Booking Services
-- Doctor Appoinments
+- Doctor Appointments
