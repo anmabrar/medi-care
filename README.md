@@ -8,9 +8,17 @@
 - Firebase
 
 # Installation
-- node install:
+- node install :
 ```
 sudo apt install nodejs
+```
+- npm install :
+```
+sudo apt install npm
+```
+- Install Angular CLI
+```
+npm install -g @angular/cli
 ```
 
 # Feature
