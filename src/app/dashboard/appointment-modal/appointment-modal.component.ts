@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AppoinmentService } from '../services/appoinment.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-appointment-modal',
@@ -7,9 +9,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppointmentModalComponent implements OnInit {
 
-  constructor() { }
+  patient_name !: string;
+  age !: string;
+  address !: string;
+  mobile !: string;
+  problem !: string;
+  time !: string;
+  data !: string;
+
+  constructor(private appoinmentService : AppoinmentService) { }
 
   ngOnInit(): void {
+  }
+
+  addAppoinment(form : NgForm){
+    const newAppoinment : any = {
+      patient_name : this.patient_name,
+      age : this.age,
+      address: this.address,
+      problem : this.problem,
+      time : this.time,
+      data : this.data
+    }
+    this.appoinmentService.addAppoinment(newAppoinment).then(()=>{
+      alert('Add successfully');
+      form.reset();
+    })
   }
 
 }

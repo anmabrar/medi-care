@@ -35,7 +35,7 @@ export class AddDoctorComponent implements OnInit {
    
     this.doctorService.addDoctor(newDoctor).then(()=>{
       if (newDoctor.name == ''|| newDoctor.degree == '' || newDoctor.hospital == '' || newDoctor.email == '' || newDoctor.mobile == ''){
-        console.log("not ok")
+    
         alert('Fill all input fields');
         return;
       }else{
