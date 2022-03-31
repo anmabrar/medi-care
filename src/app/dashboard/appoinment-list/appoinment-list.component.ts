@@ -3,6 +3,7 @@ import { AppointmentService } from '../services/appointment';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Appointment } from 'src/app/model/appointment';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { AppointmentListModalComponent } from '../appointment-list-modal/appointment-list-modal.component';
 
 @Component({
   selector: 'app-appoinment-list',
@@ -32,16 +33,14 @@ export class AppoinmentListComponent implements OnInit {
     this.appointmentService.deleteAppointment(appointment);
   }
 
-  openModal(appointment : Appointment){
-    
-  }
 
-  // openModal(doctor : Doctor){
-  //   const modalRef = this.modal.open(DoctorModalComponent,{
-  //     size : 'lg',
-  //     centered : true,
-  //   })
-  //   modalRef.componentInstance.doctor = doctor;
-  // }
+
+  openModal(appointment : Appointment){
+    const modalRef = this.modal.open(AppointmentListModalComponent,{
+      size : 'lg',
+      centered : true,
+    })
+    modalRef.componentInstance.appointment = appointment;
+  }
 
 }

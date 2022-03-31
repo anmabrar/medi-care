@@ -3,6 +3,7 @@ import { BookingService } from '../services/booking.service';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Booking } from 'src/app/model/booking';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { OrderListModalComponent } from '../order-list-modal/order-list-modal.component';
 
 
 @Component({
@@ -33,16 +34,14 @@ export class OrderListComponent implements OnInit {
     this.bookingService.deleteBooking(order);
   }
 
-  openModal(order : Booking){
-    
-  }
 
-  // openModal(doctor : Doctor){
-  //   const modalRef = this.modal.open(DoctorModalComponent,{
-  //     size : 'lg',
-  //     centered : true,
-  //   })
-  //   modalRef.componentInstance.doctor = doctor;
-  // }
+
+  openModal(order : Booking){
+    const modalRef = this.modal.open(OrderListModalComponent,{
+      size : 'lg',
+      centered : true,
+    })
+    modalRef.componentInstance.order = order;
+  }
 
 }

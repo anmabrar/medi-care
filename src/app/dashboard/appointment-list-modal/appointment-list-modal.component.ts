@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Appointment } from 'src/app/model/appointment';
+import { AppointmentService } from '../services/appointment';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-appointment-list-modal',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppointmentListModalComponent implements OnInit {
 
-  constructor() { }
+  @Input() appointment !: Appointment;
+  
+  constructor(
+    public activeModal : NgbActiveModal,
+    private appointmentService : AppointmentService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  updateAppointment(){
+    this.appointmentService.updateAppointment(this.appointment).then(()=>{
+      this.activeModal.close();
+    })
   }
 
 }
