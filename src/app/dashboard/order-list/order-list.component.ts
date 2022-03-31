@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { BookingService } from '../services/booking.service';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Booking } from 'src/app/model/booking';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
   selector: 'app-order-list',
@@ -7,9 +12,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderListComponent implements OnInit {
 
-  constructor() { }
+  orders : any;
+
+  constructor(
+    private bookingService : BookingService,
+    private firestore : AngularFirestore,
+    private modal : NgbModal
+  ) { this.getAllOrders()}
 
   ngOnInit(): void {
   }
+
+  getAllOrders(){
+    this.firestore.collection('booking').snapshotChanges().subscribe((res)=>{
+      this.orders = res.map(e => Object.assign({id:e.payload.doc.id},e.payload.doc.data()));
+    })
+  }
+  deleteOrder(order : Booking){
+    alert("Delete order?")
+    this.bookingService.deleteBooking(order);
+  }
+
+  openModal(order : Booking){
+    
+  }
+
+  // openModal(doctor : Doctor){
+  //   const modalRef = this.modal.open(DoctorModalComponent,{
+  //     size : 'lg',
+  //     centered : true,
+  //   })
+  //   modalRef.componentInstance.doctor = doctor;
+  // }
 
 }

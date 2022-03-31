@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { AppointmentService } from '../services/appointment';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Appointment } from 'src/app/model/appointment';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-appoinment-list',
@@ -7,9 +11,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppoinmentListComponent implements OnInit {
 
-  constructor() { }
+  appointments : any;
+
+  constructor(
+    private appointmentService : AppointmentService,
+    private firestore : AngularFirestore,
+    private modal : NgbModal
+  ) { this.getAllAppointments()}
 
   ngOnInit(): void {
   }
+
+  getAllAppointments(){
+    this.firestore.collection('appointments').snapshotChanges().subscribe((res)=>{
+      this.appointments = res.map(e => Object.assign({id:e.payload.doc.id},e.payload.doc.data()));
+    })
+  }
+  deleteAppointment(appointment : Appointment){
+    alert("Delete order?")
+    this.appointmentService.deleteAppointment(appointment);
+  }
+
+  openModal(appointment : Appointment){
+    
+  }
+
+  // openModal(doctor : Doctor){
+  //   const modalRef = this.modal.open(DoctorModalComponent,{
+  //     size : 'lg',
+  //     centered : true,
+  //   })
+  //   modalRef.componentInstance.doctor = doctor;
+  // }
 
 }

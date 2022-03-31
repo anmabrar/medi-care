@@ -22,6 +22,8 @@ import { AppointmentModalComponent } from './appointment-modal/appointment-modal
 import { BookingServicesModalComponent } from './booking-services-modal/booking-services-modal.component';
 import { AppoinmentListComponent } from './appoinment-list/appoinment-list.component';
 import { MediServicesListComponent } from './medi-services-list/medi-services-list.component';
+import { AppointmentListModalComponent } from './appointment-list-modal/appointment-list-modal.component';
+import { OrderListModalComponent } from './order-list-modal/order-list-modal.component';
 
 
 
@@ -44,7 +46,9 @@ import { MediServicesListComponent } from './medi-services-list/medi-services-li
     AppointmentModalComponent,
     BookingServicesModalComponent,
     AppoinmentListComponent,
-    MediServicesListComponent
+    MediServicesListComponent,
+    AppointmentListModalComponent,
+    OrderListModalComponent
   ],
   imports: [
     CommonModule,
@@ -69,7 +73,9 @@ import { MediServicesListComponent } from './medi-services-list/medi-services-li
     AppointmentModalComponent,
     BookingServicesModalComponent,
     AppoinmentListComponent,
-    MediServicesListComponent
+    MediServicesListComponent,
+    AppointmentListModalComponent,
+    OrderListModalComponent
   ]
 
 })
