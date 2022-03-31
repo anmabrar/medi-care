@@ -1,1 +1,79 @@
-<p>order-list-modal works!</p>
+<div class="container">
+    <div class="col">
+      <form class="card border-0 shadow p-3" #orderForm="ngForm">
+        <div class="form-floating mb-3 tetx-center">
+          <h3 class="text-center text-warning">order Now</h3>
+        </div>
+        <input type="hidden" name="id" [(ngModel)]="order.id" />
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="Name"
+            name="name"
+            [(ngModel)]="order.patient_name"
+          />
+          <label for="name">Patient name</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="Age"
+            name="age"
+            [(ngModel)]="order.age"
+          />
+          <label for="age">Age</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="Address"
+            name="address"
+            [(ngModel)]="order.Address"
+          />
+          <label for="address">Address</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="Problem"
+            name="problem"
+            [(ngModel)]="order.problem"
+          />
+          <label for="problem">Problem</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="time"
+            class="form-control"
+            id="Time"
+            name="time"
+            [(ngModel)]="order.time"
+          />
+          <label for="time">Time</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="date"
+            class="form-control"
+            id="Date"
+            name="data"
+            [(ngModel)]="order.data"
+          />
+          <label for="data">Date</label>
+        </div>
+        <button
+          type="button"
+          class="btn btn-outline-success"
+          (click)="updateOrder()"
+        >
+          Update order
+        </button>
+      </form>
+    </div>
+  </div>
+  
+
