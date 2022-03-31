@@ -9,6 +9,7 @@ import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { LoginComponent } from './user-auth/login/login.component';
 import { RegisterComponent } from './user-auth/register/register.component';
 import { AllMediServicesComponent } from './dashboard/all-medi-services/all-medi-services.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path : '', redirectTo:'/home',pathMatch:"full"},
@@ -16,7 +17,7 @@ const routes: Routes = [
   { path :'services', component : AllMediServicesComponent},
   { path :'doctor', component : AllDoctorComponent},
   { path :'about', component : AboutUsComponent},
-  { path :'dashboard', component : DashboardComponent},
+  { path :'dashboard', component : DashboardComponent, canActivate :[AuthGuard]},
   { path :'login', component : LoginComponent},
   { path :'register', component : RegisterComponent},
   { path : '**', component : NotFoundComponent}

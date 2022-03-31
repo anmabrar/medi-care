@@ -9,12 +9,15 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
+  
+
   constructor( private fireauth : AngularFireAuth, private router : Router) { }
 
   // login method
   login (email : string, password : string){
     this.fireauth.signInWithEmailAndPassword(email,password)
     .then( ()=> {
+     
       localStorage.setItem('token', 'true');
       this.router.navigate(['dashboard']);
     }, err=>{
@@ -56,5 +59,9 @@ export class AuthService {
     }, err => {
       alert(err.massage)
     })
+  }
+
+  isLoggedIn(){
+    return !!localStorage.getItem('token');
   }
 }
