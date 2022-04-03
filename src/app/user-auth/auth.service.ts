@@ -17,7 +17,7 @@ export class AuthService {
   login (email : string, password : string){
     this.fireauth.signInWithEmailAndPassword(email,password)
     .then( ()=> {
-     
+      
       localStorage.setItem('token', 'true');
       this.router.navigate(['dashboard']);
     }, err=>{
@@ -54,6 +54,7 @@ export class AuthService {
   googleSignIn(){
     return this.fireauth.signInWithPopup( new GoogleAuthProvider)
     .then( res=> {
+      console.log(res.user?.displayName);
       this.router.navigate(['/dashboard']);
       localStorage.setItem('token',JSON.stringify(res.user?.uid));
     }, err => {
