@@ -5,7 +5,7 @@
         <tr>
           <th scope="col">Patient Name</th>
           <th scope="col">Age</th>
-          <th scope="col">Mobile</th>
+          <th scope="col">Doctor Name</th>
           <th scope="col">Time</th>
           <th scope="col">Data</th>
           <th scope="col">Action</th>
@@ -15,7 +15,7 @@
         <tr scope="col table-secondary" *ngFor="let appointment of appointments">
           <td class="table-secondary">{{ appointment.patient_name }}</td>
           <td class="table-secondary">{{ appointment.age }}</td>
-          <td class="table-secondary">{{ appointment.mobile }}</td>
+          <td class="table-secondary">{{ appointment.doctor_name }}</td>
           <td class="table-secondary">{{ appointment.time }}</td>
           <td class="table-secondary">{{ appointment.data }}</td>
           <td class="table-secondary">

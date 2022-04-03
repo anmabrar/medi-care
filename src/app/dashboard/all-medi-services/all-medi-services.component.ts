@@ -34,12 +34,12 @@ export class AllMediServicesComponent implements OnInit {
     })
   }
 
-  openModal(mediServices : MediServices){
+  openModal(mediServices : string){
     const modalRef = this.modal.open(BookingServicesModalComponent,{
       size : 'lg',
       centered :true,
     });
-    modalRef.componentInstance.mediServices = mediServices;
+    modalRef.componentInstance.mediServicesName = mediServices;
   }
 
 }

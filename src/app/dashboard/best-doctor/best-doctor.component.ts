@@ -32,12 +32,12 @@ export class BestDoctorComponent implements OnInit {
     })
   }
 
-  openModal(doctor :Doctor ){
+  openModal(doctor :string ){
     const modalRef = this.modal.open(AppointmentModalComponent,{
       size : 'lg',
       centered : true,
     })
-    modalRef.componentInstance.doctor = doctor;
+    modalRef.componentInstance.doctorName = doctor;
   }
 
 }

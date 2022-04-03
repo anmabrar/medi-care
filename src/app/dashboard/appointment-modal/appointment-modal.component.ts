@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AppointmentService } from '../services/appointment';
 import { NgForm } from '@angular/forms';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
@@ -10,6 +10,9 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class AppointmentModalComponent implements OnInit {
 
+  @Input() doctorName !: string;
+
+  doctor_name !: string;
   patient_name !: string;
   age !: string;
   address !: string;
@@ -28,6 +31,7 @@ export class AppointmentModalComponent implements OnInit {
 
   addAppointment(form : NgForm){
     const newAppointment : any = {
+      doctor_name : this.doctorName,
       patient_name : this.patient_name,
       age : this.age,
       address: this.address,
