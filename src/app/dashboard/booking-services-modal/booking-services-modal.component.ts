@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { BookingService } from '../services/booking.service';
 import { NgForm } from '@angular/forms';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -10,6 +11,9 @@ import { NgForm } from '@angular/forms';
 })
 export class BookingServicesModalComponent implements OnInit {
 
+  @Input() mediServicesName!: string;
+
+  services_name !: string;
   patient_name !: string;
   age !: string;
   address !: string;
@@ -18,13 +22,15 @@ export class BookingServicesModalComponent implements OnInit {
   time !: string;
   data !: string;
 
-  constructor( private bookingService :BookingService) { }
+  constructor( private bookingService :BookingService, public activeModal : NgbActiveModal) { }
 
   ngOnInit(): void {
   }
 
   addBooking(form : NgForm){
     const newBooking : any = {
+      
+      services_name : this.mediServicesName,
       patient_name : this.patient_name,
       age : this.age,
       address: this.address,
@@ -35,6 +41,7 @@ export class BookingServicesModalComponent implements OnInit {
     this.bookingService.addBooking(newBooking).then(()=>{
       alert('Add successfully');
       form.reset();
+      this.activeModal.close();
     })
   }
 

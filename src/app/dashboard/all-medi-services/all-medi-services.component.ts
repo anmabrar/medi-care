@@ -5,6 +5,8 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { BookingServicesModalComponent } from '../booking-services-modal/booking-services-modal.component';
 
+
+
 @Component({
   selector: 'app-all-medi-services',
   templateUrl: './all-medi-services.component.html',

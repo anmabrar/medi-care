@@ -4,6 +4,18 @@
       <div class="form-floating mb-3 tetx-center">
         <h3 class="text-center text-warning">Appointment Now</h3>
       </div>
+      <!-- [(ngModel)]="services_name" -->
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="Name"
+          name="name"
+          value="{{mediServicesName}}"
+          readonly
+        />
+        <label for="name">Services name</label>
+      </div>
       <div class="form-floating mb-3">
         <input
           type="text"

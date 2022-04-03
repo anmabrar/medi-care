@@ -15,6 +15,8 @@ import { BookingServicesModalComponent } from '../booking-services-modal/booking
 export class BestServicesComponent implements OnInit {
 
   medi_services : any;
+  
+  
 
   constructor(
     private mediServicesService : MediServicesService,
@@ -33,12 +35,12 @@ export class BestServicesComponent implements OnInit {
     })
   }
 
-  openModal(mediServices : MediServices){
+  openModal(mediServices : string){
     const modalRef = this.modal.open(BookingServicesModalComponent,{
       size : 'lg',
       centered :true,
     });
-    modalRef.componentInstance.mediServices = mediServices;
+    modalRef.componentInstance.mediServicesName = mediServices;
   }
 
 
